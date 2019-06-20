@@ -26,6 +26,19 @@
 	5、检查是否安装成功
 		在cmd中输入node，进入编辑模式，输入 require('express')，没报错，说明全局设置成功。若报错，请检查环境变量NODE_PATH是否配置正确！
 		输入 .exit 退出node环境
+### CentOS7
+	1、下载node安装包到指定目录	
+		wget https://npm.taobao.org/mirrors/node/v11.0.0/node-v11.0.0.tar.gz
+	2、解压安装包
+		tar -zxvf node-v11.0.0.tar.gz
+	3、进入目录并安装相关插件
+		cd node-v11.0.0  && sudo yum install gcc gcc-c++
+	4、进行默认配置并编译（编译大概需要半小时左右～）
+		./configure	&& make
+	5、安装
+		sudo make install
+	6、验证安装
+		node -v
 
 ## 基础参考地址
 	1、Axios使用说明	https://www.kancloud.cn/yunye/axios/234845
