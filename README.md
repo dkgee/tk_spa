@@ -27,6 +27,7 @@
 		在cmd中输入node，进入编辑模式，输入 require('express')，没报错，说明全局设置成功。若报错，请检查环境变量NODE_PATH是否配置正确！
 		输入 .exit 退出node环境
 ### CentOS7
+#### 编译安装
 	1、下载node安装包到指定目录	
 		wget https://npm.taobao.org/mirrors/node/v11.0.0/node-v11.0.0.tar.gz
 	2、解压安装包
@@ -39,6 +40,34 @@
 		sudo make install
 	6、验证安装
 		node -v
+#### rpm包安装		
+	1、下载rpm包源，不同版本不一样，具体参考 https://github.com/nodesource/distributions
+		curl -sL https://rpm.nodesource.com/setup_11.x | bash -
+	2、安装
+		sudo yum install -y nodejs
+	3、验证
+		node -v
+	提示：使用版本管理器n安装nodejs
+		npm install -g n	# 安装n
+		n list		# 查看所有版本
+		n <version>	# 安装指定版本
+		n rm <version> # 删除指定版本
+		n latest	# 安装最新版本
+		n stable	# 安装稳定版本
+#### 环境配置
+	1、查看系统配置
+		npm config list
+	2、全局安装puppeteer
+		npm i --save puppeteer --ignore-scripts -g
+	3、搜索node模块配置
+		find / -name puppeteer
+		结果：/usr/lib/node_modules/puppeteer	
+	4、配置环境，并使其生效
+		echo "export NODE_PATH=/usr/lib/node_modules/" >> /etc/profile
+		source /etc/profile  或者 ./etc/profile
+	5、验证是否生效
+		输入node，进入编辑模式，输入 require('puppeteer')，没报错，说明全局设置成功。
+		
 
 ## 基础参考地址
 	1、Axios使用说明	https://www.kancloud.cn/yunye/axios/234845
