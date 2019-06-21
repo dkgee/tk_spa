@@ -1,5 +1,6 @@
-const fs = require('fs');
+// const fs = require('fs');
 const puppeteer = require('puppeteer');
+var request = require("request");
 
 (async () => {
   const browser = await (puppeteer.launch({ executablePath: 'C:/Users/jht/Downloads/chrome-win/chrome.exe', headless: true }));
@@ -22,10 +23,23 @@ const puppeteer = require('puppeteer');
     return ctn;
   }, BRANDS_INFO_SELECTOR);
   console.log('汽车品牌: ', JSON.stringify(brands));
-  let writerStream = fs.createWriteStream('car_brands.json');
-  writerStream.write(JSON.stringify(brands, undefined, 2), 'UTF8');
-  writerStream.end();
+  // let writerStream = fs.createWriteStream('D:/car_brands.json');
+  // writerStream.write(JSON.stringify(brands, undefined, 2), 'UTF8');
+  // writerStream.end();	
   // await bodyHandle.dispose();
+	request({
+	    url: "http://127.0.0.1:8081/test/data",
+	    method: "post",//如果是post就涉及到跨域的问题了
+	    json: true,
+	    headers: {
+	        "content-type": "application/json",
+	    },
+	    body: JSON.stringify(brands)
+	}, function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+	        console.log(body);
+	    }
+	});
 
   // 获取车源列表
   const CAR_LIST_SELECTOR = 'ul.carlist';
@@ -42,13 +56,27 @@ const puppeteer = require('puppeteer');
     });
     return ctn;
   }, CAR_LIST_SELECTOR);
+	
+	request({
+	    url: "http://127.0.0.1:8081/test/data",
+	    method: "post",//如果是post就涉及到跨域的问题了
+	    json: true,
+	    headers: {
+	        "content-type": "application/json",
+	    },
+	    body: JSON.stringify(carList)
+	}, function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+	        console.log(body);
+	    }
+	});
 
-  console.log(`总共${carList.length}辆汽车数据: `, JSON.stringify(carList, undefined, 2));
+  // console.log(`总共${carList.length}辆汽车数据: `, JSON.stringify(carList, undefined, 2));
 
   // 将车辆信息写入文件
-  writerStream = fs.createWriteStream('car_info_list.json');
-  writerStream.write(JSON.stringify(carList, undefined, 2), 'UTF8');
-  writerStream.end();
+  // writerStream = fs.createWriteStream('D:/car_info_list.json');
+  // writerStream.write(JSON.stringify(carList, undefined, 2), 'UTF8');
+  // writerStream.end();
 
   browser.close();
 })();
