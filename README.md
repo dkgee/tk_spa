@@ -70,6 +70,11 @@
 	5、验证是否生效
 		输入node，进入编辑模式，输入 require('puppeteer')，没报错，说明全局设置成功。
 		
+	chromium下载地址：https://download-chromium.appspot.com/?platform=Linux_x64&type=snapshots
+	在页面底部有各个平台版本选项 Windows(x86|x64)\ Mac\ Linux(x86|x64)...
+	其他参考地址：https://chromium.woolyss.com/
+	
+	ssr客户端部署参考：https://blog.mrwang.pw/2018/12/13/Linux%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8ssr/
 
 ## 基础参考地址
 	1、Axios使用说明	https://www.kancloud.cn/yunye/axios/234845
