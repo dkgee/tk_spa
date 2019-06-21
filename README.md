@@ -6,6 +6,8 @@
 	1、npm init --yes	初始化目录，执行后当前目录会出现package.json
 	2、npm install xxx	安装依赖模块
 	3、npm i --save puppeteer --ignore-scripts -g # 全局安装，i=install
+	4、npm install -g cnpm --registry=https://registry.npm.taobao.org	配置taobao镜像
+	5、cnpm i puppeteer -g
 
 ## 依赖模块说明
 	1、puppeteer：Chrome的无界面版本及对其进行操控的js接口套装
