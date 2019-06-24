@@ -97,6 +97,14 @@
 
 5、[介绍操作 Chrome 浏览器无头模式的工具库 Puppeteer](https://github.com/laispace/puppeteer-explore)
 
+6、[模拟用户滑动验证](https://github.com/pureZjr/puppeteerDemo)
+
+7、[nodejs爬取西瓜视频（今日头条视频）](https://github.com/jaxQin/node-spider)
+
+8、[puppeteer autotest, 用puppeteer做页面自动化测试和restful接口测试.](https://github.com/dmoosocool/puppeteer-autotest)
+
+9、[基于puppeteer的电商商品数据爬虫工具](https://github.com/xiongwilee/SkuSpider)
+
 ## phantomjs与puppeteer简单对比(截图功能)
 ![Screenshot](data/pp_phjs_compare.png)
 
