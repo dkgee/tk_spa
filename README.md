@@ -86,6 +86,20 @@
 	2、Puppeteer初探之前端自动化测试	https://cloud.tencent.com/developer/article/1006000
 	3、Puppeteer-autotest	https://cnodejs.org/topic/5a041412ad77fa2004549183
 
+## Github参考地址
+1、[官网Github仓库](https://github.com/GoogleChrome/puppeteer)
+
+2、[官网API接口地址，如各种类事件示例及整体说明文档](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md)
+
+3、[中文接口文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
+
+4、[爬取《es6标准入门》、自动推文到掘金、站点性能分析；高级爬虫、自动化UI测试、性能分析](https://github.com/zhentaoo/puppeteer-deep)
+
+5、[介绍操作 Chrome 浏览器无头模式的工具库 Puppeteer](https://github.com/laispace/puppeteer-explore)
+
+## phantomjs与puppeteer简单对比(截图功能)
+![Screenshot](data/pp_phjs_compare.png)
+
 ## 截图效果
 ![Screenshot](data/example.png)
     
