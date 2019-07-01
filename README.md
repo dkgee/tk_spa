@@ -113,4 +113,12 @@
 [时序攻击PoC](https://www.xd10086.com/posts/6571528057063090587/):构建一个字典表，根据请求返回的结果的总时间来
 探测目标是否匹配。
 
-    
+[SSRF(Server-Side Request Forgery:服务端请求伪造漏洞)](https://www.jianshu.com/p/d1d1c40f6d4c)
+
+[SQL注入](https://www.oschina.net/translate/sql-injection-walkthrought)
+
+[XPATH注入](https://www.cnblogs.com/backlion/p/8554749.html)
+   
+[LDAP注入(Lightweight Directory Access Protocol):轻量级目录访问协议](https://www.jianshu.com/p/d94673be9ed0)
+
+[NoSQL注入](https://www.cnblogs.com/wangyayun/p/6598166.html)
