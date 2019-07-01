@@ -108,6 +108,9 @@
 ## phantomjs与puppeteer简单对比(截图功能)
 ![Screenshot](data/pp_phjs_compare.png)
 
-## 截图效果
-![Screenshot](data/example.png)
+## 其他
+
+[时序攻击PoC](https://www.xd10086.com/posts/6571528057063090587/):构建一个字典表，根据请求返回的结果的总时间来
+探测目标是否匹配。
+
     
